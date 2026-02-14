@@ -5,6 +5,7 @@ public class Initialize {
     int front;
     int tail;
     int capacity;
+    int size;
 
     public void initialize(int size) {
         capacity = size;
