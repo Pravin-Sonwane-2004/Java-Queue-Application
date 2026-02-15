@@ -11,13 +11,12 @@ public class EnQueue {
     Scanner sc = new Scanner(System.in);
 
 
-    public void enQueue() {
+    public void enQueue(int data) {
         if(ini.capacity-1 ==ini.tail) {
             throw new RuntimeException("Cant Add Element Queue Is Full");
         }
-        IO.println("Enter The Element : ");
-        int data = sc.nextInt();
-        ini.tail++;
-        ini.arr[ini.tail] = data;
+        ini.tail = (ini.tail+1) % ini.capacity;
+        ini.arr[ini.tail]= data;
+        ini.size++;
     }
 }
